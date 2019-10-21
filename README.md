@@ -520,11 +520,24 @@ catch (ex) {
 ```
 # AJAX XHR & Fetch
 
-Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in AJAX programming.
+*The below XMLHttpRequests is not very used as of 2019 due to the introduction of Fetch, which I will describe
+
+*Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in AJAX programming.
 
 
-Despite its name, XMLHttpRequest can be used to retrieve any type of data, not just XML.
+*Despite its name, XMLHttpRequest can be used to retrieve any type of data, not just XML.
 
-If your communication needs to involve receiving event data or message data from a server, consider using server-sent events through the EventSource interface. For full-duplex communication, WebSockets may be a better choice.
+*If your communication needs to involve receiving event data or message data from a server, consider using server-sent events through the EventSource interface. For full-duplex communication, WebSockets may be a better choice.
+
+*XMLHttpRequest()
+The constructor initializes an XMLHttpRequest. It must be called before any other method calls.
+Properties
+This interface also inherits properties of XMLHttpRequestEventTarget and of EventTarget.
+
+*XMLHttpRequest.onreadystatechange
+An EventHandler that is called whenever the readyState attribute changes.
+
+*XMLHttpRequest.readyState Read only
+Returns an unsigned short, the state of the request.
 
 # AJAX Jquery & Axios
