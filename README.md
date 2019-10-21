@@ -71,7 +71,7 @@ console.log(array1.reduce(reducer));
 # Higher-Order functions return usage
 
 Use return statements in array method callbacks. It’s ok to omit the return if the function body consists of a single statement returning an expression without side effects, following 8.2. eslint: array-callback-return
-
+```
 // good
 [1, 2, 3].map((x) => {
   const y = x + 1;
@@ -111,6 +111,7 @@ inbox.filter((msg) => {
 
   return false;
 });
+```
 
 # Array spreads ...
 
