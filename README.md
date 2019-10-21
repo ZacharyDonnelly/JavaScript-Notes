@@ -1,4 +1,4 @@
-# Notes
+# Vanilla JS Notes
 
 # Basic DOM
 
