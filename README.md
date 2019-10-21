@@ -20,12 +20,13 @@ The keys and the values are always strings (note that, as with objects, integer 
 
 The forEach() method executes a provided function once for each array element.
 
-EXAMPLE:
+```
 var array1 = ['a', 'b', 'c'];
 
 array1.forEach(function(element) {
   console.log(element);
 });
+```
 
 
 # .map()
@@ -33,7 +34,7 @@ array1.forEach(function(element) {
 The map() method creates a new array with the results of calling a provided function on every element in the calling array.
 Higher-Order function.
 
-EAMPLE:
+```
 var array1 = [1, 4, 9, 16];
 
 // pass a function to map
@@ -41,32 +42,37 @@ const map1 = array1.map(x => x * 2);
 
 console.log(map1);
 // expected output: Array [2, 8, 18, 32]
+```
+
 
 # .filter()
 
 The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 Higher-Order function.
 
-EXAMPLE:
+```
 var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
 const result = words.filter(word => word.length > 6);
 
 console.log(result);
 // expected output: Array ["exuberant", "destruction", "present"]
+```
 
 
 # .reduce()
 
 The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 Higher-Order function.
-EXAMPLE:
+
+```
 const array1 = [1, 2, 3, 4];
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
 // 1 + 2 + 3 + 4
 console.log(array1.reduce(reducer));
 // expected output: 10
+```
 
 # Higher-Order functions return usage
 
