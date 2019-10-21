@@ -15,3 +15,26 @@ The read-only localStorage property allows you to access a Storage object for th
 It should be noted that data stored in either localStorage or sessionStorage is specific to the protocol of the page.
 
 The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings).
+
+
+# .map
+
+The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+Higher-Order function.
+
+# .filter
+
+The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+Higher-Order function.
+
+# .reduce
+
+The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+Higher-Order function.
+EXAMPLE:
+const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
