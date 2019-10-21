@@ -461,3 +461,62 @@ function findUniq(arr) {
 }
 findUniq([ 3,3,3,10,3,3,3 ]);
 ```
+# Try, Catch, and Finally
+
+The try...catch statement marks a block of statements to try, and specifies a response, should an exception be thrown.
+
+The try statement consists of a try block, which contains one or more statements. {} must always be used, even for single statements. At least one catch clause, or a finally clause, must be present. This gives us three forms for the try statement:
+```
+try...catch
+try...finally
+try...catch...finally
+```
+A catch clause contains statements that specify what to do if an exception is thrown in the try block. That is, you want the try block to succeed, and if it does not succeed, you want to pass control to the catch block. If any statement within the try block (or in a function called from within the try block) throws an exception, control is immediately shifted to the catch clause. If no exception is thrown in the try block, the catch clause is skipped.
+
+The finally clause executes after the try block and catch clause(s) execute but before the statements following the try statement. It always executes, regardless of whether an exception was thrown or caught.
+
+You can nest one or more try statements. If an inner try statement does not have a catch clause, the enclosing try statement's catch clause is entered.
+```
+try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// "inner" "oops"
+// "finally"
+```
+```
+try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+    throw ex;
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// "inner" "oops"
+// "finally"
+// "outer" "oops"
+```
+
+
