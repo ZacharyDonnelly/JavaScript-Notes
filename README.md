@@ -83,3 +83,13 @@ for (i = 0; i < len; i += 1) {
 
 // good
 const itemsCopy = [...items];
+
+To convert an iterable object to an array, use spreads ... instead of Array.from.
+
+const foo = document.querySelectorAll('.foo');
+
+// good
+const nodes = Array.from(foo);
+
+// best
+const nodes = [...foo];
