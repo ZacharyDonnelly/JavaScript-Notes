@@ -569,3 +569,5 @@ Fetch requests are controlled by the connect-src directive of Content Security P
 # AJAX Jquery & Axios
 
 # Async/Await
+
+# Promises
