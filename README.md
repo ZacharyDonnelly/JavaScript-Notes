@@ -122,7 +122,7 @@ inbox.filter((msg) => {
 # Array spreads ...
 
 Use array spreads ... to copy arrays.
-``
+```
 // bad
 const len = items.length;
 const itemsCopy = [];
@@ -144,4 +144,4 @@ const nodes = Array.from(foo);
 
 // best
 const nodes = [...foo];
-``
+```
