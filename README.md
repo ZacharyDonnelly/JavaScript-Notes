@@ -170,7 +170,7 @@ function getFullName({ firstName, lastName }) {
   return `${firstName} ${lastName}`;
 }
 
-5.2 Use array destructuring. eslint: prefer-destructuring
+Use array destructuring. eslint: prefer-destructuring
 
 const arr = [1, 2, 3, 4];
 
@@ -181,7 +181,7 @@ const second = arr[1];
 // good
 const [first, second] = arr;
 ```
-5.3 Use object destructuring for multiple return values, not array destructuring.
+Use object destructuring for multiple return values, not array destructuring.
 
 Why? You can add new properties over time or change the order of things without breaking call sites.
 ```
