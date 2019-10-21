@@ -16,18 +16,47 @@ It should be noted that data stored in either localStorage or sessionStorage is 
 
 The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings).
 
+#.forEach()
 
-# .map
+The forEach() method executes a provided function once for each array element.
+
+EXAMPLE:
+var array1 = ['a', 'b', 'c'];
+
+array1.forEach(function(element) {
+  console.log(element);
+});
+
+
+# .map()
 
 The map() method creates a new array with the results of calling a provided function on every element in the calling array.
 Higher-Order function.
 
-# .filter
+EAMPLE:
+var array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+
+# .filter()
 
 The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 Higher-Order function.
 
-# .reduce
+EXAMPLE:
+var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
+
+# .reduce()
 
 The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 Higher-Order function.
