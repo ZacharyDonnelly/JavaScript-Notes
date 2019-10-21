@@ -451,3 +451,13 @@ Enforce the location of arrow function bodies with implicit returns. eslint: imp
    bar
 )
 ```
+# Various Algorithim Exercises
+
+Return the number that only appears once in the array
+```
+function findUniq(arr) {
+  arr.sort((a,b)=>a-b);
+  return arr[0]==arr[1]?arr.pop():arr[0];
+}
+findUniq([ 3,3,3,10,3,3,3 ]);
+```
