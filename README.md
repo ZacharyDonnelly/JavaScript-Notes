@@ -67,3 +67,19 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
 // 1 + 2 + 3 + 4
 console.log(array1.reduce(reducer));
 // expected output: 10
+
+# Array spreads ...
+
+Use array spreads ... to copy arrays.
+
+// bad
+const len = items.length;
+const itemsCopy = [];
+let i;
+
+for (i = 0; i < len; i += 1) {
+  itemsCopy[i] = items[i];
+}
+
+// good
+const itemsCopy = [...items];
