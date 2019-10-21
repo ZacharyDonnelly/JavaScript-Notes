@@ -520,7 +520,7 @@ catch (ex) {
 ```
 # AJAX XHR & Fetch
 
-*The below XMLHttpRequests is not very used as of 2019 due to the introduction of Fetch, which I will describe*
+*The below XMLHttpRequests is not very used as of 2019 due to the introduction of Fetch, which I will describe underneath it.*
 
 *Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in AJAX programming.*
 
