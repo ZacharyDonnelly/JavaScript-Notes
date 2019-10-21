@@ -16,7 +16,7 @@ It should be noted that data stored in either localStorage or sessionStorage is 
 
 The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings).
 
-#.forEach()
+# .forEach()
 
 The forEach() method executes a provided function once for each array element.
 
