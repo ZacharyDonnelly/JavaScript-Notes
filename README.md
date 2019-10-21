@@ -540,4 +540,32 @@ An EventHandler that is called whenever the readyState attribute changes.*
 *XMLHttpRequest.readyState Read only
 Returns an unsigned short, the state of the request.*
 
+Fetch
+
+The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
+
+This kind of functionality was previously achieved using XMLHttpRequest. Fetch provides a better alternative that can be easily used by other technologies such as Service Workers. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.
+
+The fetch specification differs from jQuery.ajax() in two main ways:
+
+The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with ok status set to false), and it will only reject on network failure or if anything prevented the request from completing.
+
+By default, fetch won't send or receive any cookies from the server, resulting in unauthenticated requests if the site relies on maintaining a user session (to send cookies, the credentials init option must be set).
+
+Have a look at the following code:
+```
+const response = await fetch('http://example.com/movies.json');
+const myJson = await response.json();
+console.log(JSON.stringify(myJson));
+```
+Here we are fetching a JSON file across the network and printing it to the console. The simplest use of fetch() takes one argument — the path to the resource you want to fetch — and returns a promise containing the response (a Response object).
+
+This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the json() method (defined on the Body mixin, which is implemented by both the Request and Response objects.)
+
+Note: The Body mixin also has similar methods to extract other types of body content; see the Body section for more.
+
+Fetch requests are controlled by the connect-src directive of Content Security Policy rather than the directive of the resources it's retrieving.
+
 # AJAX Jquery & Axios
+
+# Async/Await
