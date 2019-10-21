@@ -139,6 +139,42 @@ var sum = nums.reduce(function(prevVal, curVal, curIndex, origArr) {
 
 console.log(sum); // => 10
 ```
+# .sort()
+
+The sort() method sorts an array alphabetically:
+
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        // Sorts the elements of fruits
+```
+The reverse() method reverses the elements in an array.
+
+You can use it to sort an array in descending order:
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        // First sort the elements of fruits
+fruits.reverse();     // Then reverse the order of the elements
+```
+
+By default, the sort() function sorts values as strings.
+
+This works well for strings ("Apple" comes before "Banana").
+
+However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+You can fix this by providing a compare function:
+
+```
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+
+//Use the same trick to sort an array descending:
+
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return b - a});
+```
 # Higher-Order functions return usage
 
 Use return statements in array method callbacks. It’s ok to omit the return if the function body consists of a single statement returning an expression without side effects, following 8.2. eslint: array-callback-return
