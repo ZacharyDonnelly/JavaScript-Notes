@@ -589,3 +589,15 @@ function twoSum(numbers, target) {
     }
 }
 ```
+Sort The Odd
+*You have an array of numbers.*
+*Your task is to sort ascending odd numbers but even numbers must be on their places.*
+
+*Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.*
+
+```
+function sortArray(array) {
+  const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+  return array.map((x) => x % 2 ? odd.shift() : x);
+}
+```
