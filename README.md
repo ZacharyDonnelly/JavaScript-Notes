@@ -588,6 +588,20 @@ Here we are fetching a JSON file across the network and printing it to the conso
 
 This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the json() method (defined on the Body mixin, which is implemented by both the Request and Response objects.)
 
+Handling Fetch Errors
+```
+fetch(url)
+.then(function(res){
+  if(!res.ok) {
+    throw Error(404);
+ }
+ return res;
+}).then(function(response) {
+  console.log('ok');
+}).catch(function(error) {
+  console.log(error);
+ });
+ ```
 # AJAX Jquery & Axios
 
 # Async/Await
