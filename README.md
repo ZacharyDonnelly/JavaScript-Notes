@@ -542,9 +542,35 @@ Returns an unsigned short, the state of the request.*
 
 Fetch
 
-The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
+Basic syntax-using promises
+```
+fetch(url)
+.then(function(res) {
+  console.log(res);
+})
+.catch(function(error) {
+  console.log(error)
+});
+```
+```
+const url = "https;//api.coindesk.com/v1/bpi/currentprice.json";
+fetch(url)
+.then(function(data){
+  console.log(data);
+  console.log("status code was: " + data.status)
+});
+```
+Parsing JSON with Fetch
+```
+fetch(url).then(function(res) {
+return res.json();
+});.then(function(data){
+console.log(data);
+}).catch(function(){
+console.log('problem!)
+```
 
-This kind of functionality was previously achieved using XMLHttpRequest. Fetch provides a better alternative that can be easily used by other technologies such as Service Workers. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.
+The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
 
 The fetch specification differs from jQuery.ajax() in two main ways:
 
@@ -561,10 +587,6 @@ console.log(JSON.stringify(myJson));
 Here we are fetching a JSON file across the network and printing it to the console. The simplest use of fetch() takes one argument — the path to the resource you want to fetch — and returns a promise containing the response (a Response object).
 
 This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the json() method (defined on the Body mixin, which is implemented by both the Request and Response objects.)
-
-Note: The Body mixin also has similar methods to extract other types of body content; see the Body section for more.
-
-Fetch requests are controlled by the connect-src directive of Content Security Policy rather than the directive of the resources it's retrieving.
 
 # AJAX Jquery & Axios
 
