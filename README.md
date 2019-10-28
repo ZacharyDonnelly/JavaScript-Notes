@@ -451,16 +451,6 @@ Enforce the location of arrow function bodies with implicit returns. eslint: imp
    bar
 )
 ```
-# Various Algorithim Exercises
-
-Return the number that only appears once in the array
-```
-function findUniq(arr) {
-  arr.sort((a,b)=>a-b);
-  return arr[0]==arr[1]?arr.pop():arr[0];
-}
-findUniq([ 3,3,3,10,3,3,3 ]);
-```
 # Try, Catch, and Finally
 
 The try...catch statement marks a block of statements to try, and specifies a response, should an exception be thrown.
@@ -746,4 +736,13 @@ function findOutlier(int){
   var odd = int.filter(a=>a%2!==0);
   return even.length==1? even[0] : odd[0];
 }
+```
+
+Return the number that only appears once in the array
+```
+function findUniq(arr) {
+  arr.sort((a,b)=>a-b);
+  return arr[0]==arr[1]?arr.pop():arr[0];
+}
+findUniq([ 3,3,3,10,3,3,3 ]);
 ```
