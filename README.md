@@ -83,7 +83,7 @@ addKeyAndValue([{name: 'Elie'},{name: 'Tim'},{name: 'Elie'}], "isInstructor", tr
     }
 ]
 */
-
+```
 # .map()
 
 The map() method creates a new array with the results of calling a provided function on every element in the calling array.
