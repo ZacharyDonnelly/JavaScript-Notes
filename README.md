@@ -27,7 +27,62 @@ array1.forEach(function(element) {
   console.log(element);
 });
 ```
+```
+function double (arr) {
+  var simpan =[];
+  
+  arr.forEach ( function (val, index, array) {
+    simpan.push(val*2);
+  });
+  return simpan;
+}
+console.log(double([4,3,2,1])); //[8,6,4,2]
+```
 
+Write a function called printFirstAndLast which accepts an array (of objects) and console.logs a new string with the first character and the last character of each value.
+```
+function printFirstAndLast (arr) {
+  
+  var newString = '';
+  
+  arr.forEach ( function (val) {
+    var newVal = val[val.length-1];
+    newString = val[0] + newVal;
+    console.log(newString);
+  });
+}
+printFirstAndLast(['awesome','example','of','forEach']); 
+
+// ae
+// ee
+// of
+// fh
+```
+
+Write a function called addKeyAndValue which accepts three parameters, an array (of objects), a key and a value. This function should return the array of objects after each key and value have been added to each object in the array.
+
+```
+function addKeyAndValue(arr,key,val){
+  arr.forEach(obj => obj[key] = val)
+  return arr
+}
+addKeyAndValue([{name: 'Elie'},{name: 'Tim'},{name: 'Elie'}], "isInstructor", true)
+/*
+[
+    {
+        name: 'Elie',
+        isInstructor: true
+    },
+    {
+        name: 'Tim',
+        isInstructor: true
+    },
+    {
+        name: 'Elie',
+        isInstructor: true
+    }
+]
+*/
 
 # .map()
 
