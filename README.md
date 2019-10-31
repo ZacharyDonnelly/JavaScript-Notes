@@ -151,8 +151,9 @@ extractKey([{name: "Elie", isInstructor:true},{name: "Tim", isInstructor:true},{
 
 # .filter()
 
-The filter() method creates a new array with all elements that pass the test implemented by the provided function.
-Higher-Order function.
+filter returns an array just like map, but inside the callback you must return an expression that evaluates to true or false. If the expression evaluates to true, the value will be added to the returned array.
+
+You can think of the callback to filter as a sort of testing function. If the element in the array passes the test, filter keeps the element; otherwise, filter tosses it out.
 
 ```
 var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
@@ -193,6 +194,34 @@ var dataMod = data.filter(function(el) {
   }
 });
 ```
+
+Write a function called filterLetters which accepts an array of letters and returns the number of occurrences of a specific letter. This function should be case insensitive
+```
+function filterLetters(arr,letter){
+  let count = 0
+  arr.filter(x => {
+     if(x.toLowerCase() == letter.toLowerCase()){
+    count++
+  }
+})
+return count
+}
+filterLetters(["a","a","b","c","A"], "B")
+// returns 1
+```
+Write a function called filterKey which accepts two parameters, an array of objects, and the name of a key and returns an array with only those objects which have truthy values for that key:
+```
+function filterKey(arr,key){
+  const newArr = []
+  arr.filter(x => {
+    if(x[key]){
+      newArr.push(x)
+    }
+  })
+  return newArr
+}
+filterKey([{name: "Elie", isInstructor:true, isHilarious: false},{name: "Tim", isInstructor:true, isHilarious: true},{name: "Matt", isInstructor:true}], "isHilarious")
+//returns [{name: "Tim", isInstructor:true, isHilarious: true}]
 
 # .reduce()
 
