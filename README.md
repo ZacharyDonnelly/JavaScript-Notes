@@ -222,6 +222,7 @@ function filterKey(arr,key){
 }
 filterKey([{name: "Elie", isInstructor:true, isHilarious: false},{name: "Tim", isInstructor:true, isHilarious: true},{name: "Matt", isInstructor:true}], "isHilarious")
 //returns [{name: "Tim", isInstructor:true, isHilarious: true}]
+```
 
 # .reduce()
 
