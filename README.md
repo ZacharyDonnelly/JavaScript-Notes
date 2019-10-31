@@ -120,6 +120,34 @@ var rounded = arr.map(Math.ceil);
 
 console.log(rounded); // => [2, 3, 6, 13]
 ```
+Write a function called valTimesIndex which accepts an array of numbers and returns a new array with each value multiplied by the index it is at in the array:
+```
+function valTimesIndex(arr){
+  const arra = [];
+  arr.map(function(x,index){
+    arra.push(x * index)
+  })  
+  return arra
+}
+
+valTimesIndex([1,2,3]) // [0,2,6]
+```
+
+Write a function called extractKey which accepts two parameters, an array of objects, and the name of a key and returns an array with just the values for that key:
+```
+function extractKey(arr,key){
+  const newArr = [];
+  arr.map(function(x){
+      newArr.push(x[key]);
+  })
+  return newArr
+}
+
+extractKey([{name: "Elie", isInstructor:true},{name: "Tim", isInstructor:true},{name: "Matt", isInstructor:true}], "name")
+///["Elie", "Tim", "Matt"]
+```
+ 
+
 
 # .filter()
 
