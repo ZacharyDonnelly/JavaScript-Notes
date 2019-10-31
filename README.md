@@ -280,6 +280,22 @@ function extractKey(arr,key){
 extractKey([{name: "Elie", isInstructor:true},{name: "Tim", isInstructor:true},{name: "Matt", isInstructor:true}], "name");
 // returns ["Elie", "Tim", "Matt"]
 ```
+Write a function called filterLetters which accepts an array of letters and returns the number of occurrences of a specific letter. This function should be case insensitive
+```
+function filterLetters(arr,letter){
+  let count = 0;
+  arr.reduce((acc,curr) =>{
+    if(curr.toLowerCase() == letter.toLowerCase()){
+      count++
+    }
+  }, [])
+  return count
+}
+
+filterLetters(["a","a","b","c","A"], "a")//3
+filterLetters(["a","a","b","c","A"], "z")//0
+filterLetters(["a","a","b","c","A"], "B")//1
+```
 # .sort()
 
 The sort() method sorts an array alphabetically:
