@@ -266,6 +266,17 @@ In the last iteration, acc is 17 and next is 8; the callback returns 17 + 8 = 25
 Now the array is exhausted, so reduce returns 25 (which is the sum of all elements in the array, plus 5)
 */
 ```
+Write a function called extractKey which accepts two parameters, an array of objects, and the name of a key and returns an array with just the values for that key:
+```
+function extractKey(arr,key){
+ return arr.reduce((acc,obj) =>{
+    return acc.concat(obj[key])
+  },[])
+}
+
+extractKey([{name: "Elie", isInstructor:true},{name: "Tim", isInstructor:true},{name: "Matt", isInstructor:true}], "name");
+// returns ["Elie", "Tim", "Matt"]
+```
 # .sort()
 
 The sort() method sorts an array alphabetically:
